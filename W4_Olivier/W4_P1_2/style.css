@@ -1,0 +1,60 @@
+.jaune{
+    grid-area: jaune;
+    background-color: yellow;
+}
+.rouge{
+    grid-area: rouge;
+    background-color: red;
+}
+.vert{
+    grid-area: vert;
+    background-color: green;
+}
+.bleu{
+    grid-area: bleu;
+    background-color: blue;
+}
+.marron{
+    grid-area: marron;
+    background-color: brown;
+}
+
+@media screen and (max-width:1050px) and (orientation:portrait){
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'jaune jaune jaune'
+        'rouge rouge rouge'
+        'vert bleu bleu'
+        'vert marron marron';
+    }
+}
+@media screen and (max-width:750px) and (orientation:portrait){
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'marron vert bleu'
+        'marron vert bleu'
+        'marron rouge bleu'
+        'marron rouge jaune';
+    }
+}
+
+@media screen and (max-width:1050px) and (orientation:landscape){
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'jaune jaune jaune rouge rouge rouge'
+        'bleu bleu marron marron vert vert';
+}
+
+@media screen and (max-width:750px) and (orientation:landscape){
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'vert vert vert vert vert vert'
+        'bleu rouge rouge rouge rouge rouge'
+        'bleu jaune jaune jaune marron marron'
+        'bleu jaune jaune jaune marron marron'
+        'bleu jaune jaune jaune marron marron';
+    }

@@ -1,0 +1,29 @@
+
+---------------------code JS------------------------------------
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+------------------------code CSS---------------------------------------------------------------
+
+/* The progress container (grey background) */
+.progress-container {
+    position: absolute;
+    z-index: 1;
+    width: 68%;
+    height: 100%;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 100%;
+    background: #0f78bf;
+    opacity: 0.2;
+    width: 0%;
+  }

@@ -1,0 +1,15 @@
+{
+    "name": "olivier/test",
+    "description": "first test",
+    "type": "project",
+    "require": {
+        "egulias/email-validator": "^2.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "olivier sonrel",
+            "email": "olivier@sonrel.com"
+        }
+    ]
+}

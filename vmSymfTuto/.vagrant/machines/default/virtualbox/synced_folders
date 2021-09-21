@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/html":{"guestpath":"/var/www/html","hostpath":"C:/Users/gogogo/VM/vmSymfTuto/data","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/gogogo/VM/vmSymfTuto","disabled":false,"__vagrantfile":true}}}

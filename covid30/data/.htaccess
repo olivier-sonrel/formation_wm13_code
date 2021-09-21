@@ -1,0 +1,36 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpg|gif|png)$ [NC]
+
+RewriteRule  ^category/(.*)$/?$                category.php?slug=$1                [NC,L]
+RewriteRule  ^page/(.*)$/?$                    page.php?slug=$1                    [NC,L]
+RewriteRule  ^news/(.*)$/?$                    news.php?slug=$1                    [NC,L]
+RewriteRule  ^prevention/(.*)$/?$              prevention.php?slug=$1              [NC,L]
+RewriteRule  ^doctor/(.*)$/?$                  doctor.php?slug=$1                  [NC,L]
+RewriteRule  ^product/(.*)$/?$                 product.php?slug=$1                 [NC,L]
+RewriteRule  ^search$                          search.php                          [NC,L]
+RewriteRule  ^cart$                            cart.php                            [NC,L]
+RewriteRule  ^checkout$                        checkout.php                        [NC,L]
+RewriteRule  ^verify-registration$             verify-registration.php             [NC,L]
+RewriteRule  ^verify-registration-success$     verify-registration-success.php     [NC,L]
+RewriteRule  ^verify-subscriber$               verify-subscriber.php               [NC,L]
+RewriteRule  ^verify-subscriber-success$       verify-subscriber-success.php       [NC,L]
+RewriteRule  ^payment-success$                 payment-success.php                 [NC,L]
+RewriteRule  ^login$                           login.php                           [NC,L]
+RewriteRule  ^forget-password$                 forget-password.php                 [NC,L]
+RewriteRule  ^reset-password$                  reset-password.php                  [NC,L]
+RewriteRule  ^reset-password-success$          reset-password-success.php          [NC,L]
+RewriteRule  ^registration$                    registration.php                    [NC,L]
+RewriteRule  ^customer-dashboard$              customer-dashboard.php              [NC,L]
+RewriteRule  ^customer-order$                  customer-order.php                  [NC,L]
+RewriteRule  ^customer-delivery-track$         customer-delivery-track.php         [NC,L]
+RewriteRule  ^customer-edit-profile$           customer-edit-profile.php           [NC,L]
+RewriteRule  ^customer-edit-password$          customer-edit-password.php          [NC,L]
+RewriteRule  ^logout$                          logout.php                          [NC,L]
+
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>

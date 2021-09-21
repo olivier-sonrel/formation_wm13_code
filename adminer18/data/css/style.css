@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+body{
+    background-image: url('/images/accueil.jpg');
+
+}
+
+header, footer {
+
+    background-image: url('/images/header-background.jpg');
+    padding: 20px;
+    background-position: right;
+    background-size: auto;
+    margin-bottom: 40px;
+}
+
+header ul, footer ul {
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+ a,p {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-family:;
+}
+header li {
+    min-width: 90px;
+    justify-content: center;
+ }
+
+main{
+    min-height: 70vh;
+}
+
+.main_title{
+    justify-content: center;
+    background-image: url('/images/wood.jpg');
+    max-width: 50vw;
+    align-self: center;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 10px 5px 5px black;
+    text-shadow: rgba(255,255,255,.5) 0 1px 0;
+}
+
+.ligne{
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ligne ,h2,p,h3 {
+    padding: 20px;
+    min-width: 20%;
+}
+
+.button {
+    margin: 5px;
+    min-height: 30px;
+    font: 17px/1em 'pixel', sans-serif;
+    font-weight: bold;
+    text-shadow: rgba(255,255,255,.5) 0 1px 0;
+    user-select: none;
+    padding: 0 .6em .0.6em;
+    position: relative;
+    border-radius: 8px;
+    border-top: 1px solid rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0.5) ), to( rgba(255,255,255,0.9) ));
+    transition: background .2s ease-in-out;
+    background-color: unset;
+    }
+
+ form{
+    flex-direction: column;
+    width: 50%;
+    padding: 30px;
+}
+
+.form {
+    align-items: center;
+}
+
+.form p {
+    min-width: 125%;
+}
+
+main p,h3,h2{
+  background-color: rgba(255, 255, 255, 0.7);
+  align-self: stretch;
+}
+

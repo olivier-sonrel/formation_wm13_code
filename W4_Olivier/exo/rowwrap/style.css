@@ -1,0 +1,17 @@
+.around {
+    display: flex;
+    background-color: blue;
+    flex-flow: row wrap;
+
+
+
+}
+
+.around div {
+    background-color: silver;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}

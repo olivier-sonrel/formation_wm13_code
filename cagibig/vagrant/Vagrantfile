@@ -1,0 +1,28 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure('2') do |config|
+
+  #config.vagrant.plugins = ["vagrant-winnfsd"]
+  unless Vagrant.has_plugin?("vagrant-winnfsd")
+    raise  Vagrant::Errors::VagrantError.new, "vagrant-winnfsd plugin is missing. Please install it using 'vagrant plugin install vagrant-winnfsd' and rerun 'vagrant up'"
+  end
+
+  config.vm.box = 'ubuntu/xenial64'
+  config.vm.network 'private_network', ip: "192.168.34.63"
+  config.vm.hostname = "cagibig"
+  config.vm.synced_folder '..', '/var/www/html', type: 'nfs', mount_options: ['rw', 'vers=3', 'tcp', 'nolock', 'fsc' ,'actimeo=2']
+
+
+  config.vm.provider "virtualbox" do |v|
+    v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+    v.name = "cagibig"
+    v.memory = "2048"
+    #v.cpus = 2
+    #v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    #v.customize ["modifyvm", :id, "--ioapic", "on"]
+    #v.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
+  end
+
+end

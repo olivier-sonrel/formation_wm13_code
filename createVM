@@ -1,0 +1,59 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+ exit "
+ Le nombre d'arguments est invalide, le premier param est le nom de la machine, le deuxiéme est le dernier point de l'ip.
+ "
+fi
+
+mkdir $1$2
+cd $1$2
+mkdir data
+
+
+# Création du fichier install-packages.sh qui servira
+# à mettre à jour et installer les paquets de sous VM.
+# Il confifugre mysql avec un mot de passe de '0000' par défaut
+# (à ne laisser que pour les VM pédagogiques)
+echo "#!/bin/bash
+sudo apt-get update
+export UBUNTU_FRONTEND='noninteractive'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password 0000'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 0000'
+sudo apt-get install apache2 php7.0 libapache2-mod-php7.0 mysql-server php7.0-mysql php-xdebug -y
+sudo sed -i '462c\display_errors = On' /etc/php/7.0/apache2/php.ini
+sudo sed -i '473c\display_startup_errors = On' /etc/php/7.0/apache2/php.ini
+sudo service apache2 restart
+sudo echo "alias Html=\'/var/www/html\'">~/.bash_aliases
+source ~/.bashrc
+">data/pimp
+
+echo "
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure('2') do |config|
+       config.vm.box = 'ubuntu/xenial64'
+       config.vm.network 'private_network', ip: '192.168.33.$2'
+       config.vm.synced_folder './data', '/var/www/html'
+       config.vm.provider 'virtualbox' do |v|
+           vb.memory = '2048'
+           vb.name = '$1$2'
+       end
+   end
+   ">Vagrantfile
+
+#touch Vagrantfile
+#echo "# -*- mode: ruby -*-" >> Vagrantfile
+#echo "# vi: set ft=ruby :" >> Vagrantfile
+#echo "Vagrant.configure(\"2\") do |config|" >> Vagrantfile
+#echo "  config.vm.box = \"ubuntu/xenial64\"" >> Vagrantfile
+#echo "  config.vm.network \"private_network\", ip: \"192.168.33.$2\"" >> Vagrantfile
+#echo "  config.vm.synced_folder \"./data\", \"/var/www/html/\"" >> Vagrantfile
+#echo "  config.vm.provider :virtualbox do |vb|" >> Vagrantfile
+#echo "    vb.name = \"$1$2\"" >> Vagrantfile
+#echo "  end" >> Vagrantfile
+#echo "end" >> Vagrantfile
+
+echo "Virtual machine $1$2 dans le dossier $1$2, adresse IP: 192.168.33.$2"
+#aller dans dossier$1$2
+#cd .\\$1$2\\ ; vagrant up ; vagrant ssh

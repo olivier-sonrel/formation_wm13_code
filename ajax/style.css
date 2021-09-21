@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* a {
+    color: black;
+    text-decoration: none;
+} */
+
+ul{
+    list-style: none;
+}
+
+.disabled {
+	pointer-events: none;
+	cursor: default;
+}
+
+.none{
+    display: none;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex{
+    display: flex;
+}
+
+button {
+	position: relative;
+	margin: .2em;
+	border: solid 1px oldlace;
+    padding: 0.2em;
+	border-radius: .5%;
+	color: #fff;
+	text-shadow: 1px 1px black;
+	font: 900 1.5em calligraffitti, cursive;
+	filter: contrast(.65);
+	transition: .2s ease-out;
+    cursor: pointer;
+    background:none !important;
+}
+
+header{
+    align-self: stretch;
+    padding: 1em;
+}
+
+header h1{
+    text-align: center;
+}
+
+aside{
+    align-self: flex-start;
+    overflow-y: scroll;
+    scrollbar-color: #000 rgba(0,0,0,.15);
+    scrollbar-width: thin;
+    min-width: 300px;
+}
+
+aside::-webkit-scrollbar {
+    width: 0.2rem;
+    background-color: rgba(0,0,0,.15); 
+  }
+aside::-webkit-scrollbar-thumb {
+      background: #000; 
+  }
+
+aside .pagination-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+aside li{
+    margin: 0.5em;
+    background-color: grey;
+}
+
+nav {
+    justify-content: space-around;
+    display: flex;
+}
+
+main{
+    min-height: 50vh;
+    min-width: 61vw;
+    background-color: blueviolet;
+}
+
+#content{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content2{
+    padding: 2em;
+    display: flex;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+}
+
+#content button{
+    font-size: small;
+}
+
+
+#card-img{
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img{
+    border-radius: 4%;
+    max-width: 58%;
+}
+
+.say-please{
+    display: block;
+    background-image: url(image/please.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 84%;
+    position: absolute;
+    border-radius: 5%;
+    margin: 5%;
+}
+
+.please-button{
+    position: absolute;
+    bottom: 20%;
+    left: 21%;
+    width: 56%;
+    height: 15%;
+    font-size: xx-large;
+    font-weight: 900;
+    color: skyblue;
+}
+
+#card-color p{
+    margin-right: 1em;
+}
+
+.mana-symbole{
+    height: 15px;
+}
+
+.illus{
+    width: 40%;
+    margin: 1em;
+}

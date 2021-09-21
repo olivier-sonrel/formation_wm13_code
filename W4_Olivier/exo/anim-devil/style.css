@@ -1,0 +1,28 @@
+
+body{
+    min-height: 1000px;
+    max-width: 85vw;
+}
+
+img{
+    max-width: 100%;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  animation-name: cube;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  position:relative;
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
+  animation-timing-function: ease-in-out;
+}
+@keyframes cube {
+    0%   {left:0px; top:0px;}
+    25%  {left:0px; top:100px;}
+    50%  {left:100px; top:100px;}
+    75%  {left:100px; top:0px;}
+    100% {left:0px; top:0px;}
+}

@@ -1,0 +1,230 @@
+@font-face {
+	font-family: 'Indie Flower';
+	src: url('/image/IndieFlower-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Sniglet';
+	src: url('/image/Sniglet-Regular.ttf');
+}
+/* ----------------SUN-------------- */
+@keyframes sun {
+  from {
+    margin-left: 40vw;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+#sun{
+    width: 70px;
+    animation-duration: 3s;
+    animation-name: sun;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+	align-self: start;
+}
+/* ----------------BALLON-------------- */
+@keyframes ballon {
+	0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateY(150px);
+    }
+
+    100% {
+        transform: translateX(150px) rotate(30deg);
+    }
+}
+#ballon{
+    width: 70px;
+    animation-duration: 7s;
+    animation-name: ballon;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+	align-self: start;
+}
+/* ----------------CLOUD-------------- */
+@keyframes cloud {
+  from {
+    margin-left: 40vw;
+  }
+
+  to {
+    margin-left: -40%;
+  }
+}
+#cloud{
+    width: 70px;
+    animation-duration: 5s;
+    animation-name: cloud;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+	align-self: start;
+
+}
+/* background animate */
+@keyframes sky {
+	0% {background: linear-gradient(#0298f9,#fff);background-size: 100% 100%;}
+  	50% {background-size: 200% 200%;}
+  	100% {background: linear-gradient(#0298f9,#fff);background-size: 100% 100%;}
+}
+.section1{
+	height: 100vh;
+	width: 100vw;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	animation-name: sky;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+/* ---------------------END ANIMATE----------------------- */
+*{
+    margin: 0;
+    padding: 0;
+}
+.flex{
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: white;
+    margin: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Indie Flower', cursive;
+}
+h2{
+    color: #1ca2f9;
+    border-bottom: 1px solid;
+    width: fit-content;
+    margin: 1em;
+}
+h3{
+    margin-top: 1em;
+}
+.fas, .far{
+    padding-right: 1em;
+    color: white;
+}
+body{
+    font-family: 'Sniglet',cursive;
+    flex-flow: column;
+    align-items: stretch;
+
+}
+
+header{
+    background-color: #1ca2f9;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+nav{
+    align-items: center;
+    justify-content: space-around;
+}
+nav .fa-bars{
+    display: none;
+}
+main{
+    width: 100vw;
+}
+
+.section2{
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.section2 p{
+    margin: 1em;
+}
+.section2 img{
+    margin: 3px;
+}
+.section3{
+    background-color: #1ca2f9;
+    justify-content: space-around;
+    align-items: center;
+}
+.section3 .circle{
+    background-color: white;
+    border-radius: 50%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #1ca2f9;
+    box-shadow: 1px 1px 12px #00000066;
+    padding: 1em;
+    margin: 1em;
+}
+.section4{
+    flex-flow: column;
+    align-items: center;
+}
+.section4 .service{
+        background: linear-gradient(#0298f9,#70cbf4);
+        color: white;
+        margin: 3px 0px 3px 0px;
+        max-width: 28%;
+        padding: 14px 3px 14px 3px;
+}
+.section4 .liste{
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.section4 > p{
+    margin: 1em;
+}
+footer{
+    background-color: #e6e3e3;
+    align-items: center;
+    justify-content: space-between;
+}
+footer div{
+    flex-flow: column;
+    margin: 1em;
+    padding: 1em;
+}
+
+/* ----------------------------------------------------- */
+@media screen and (max-width:768px){
+.screen{
+    display: none;
+}
+nav .fa-bars{
+    display:block;
+}
+
+.gallery{
+    flex-direction: column;
+}
+.gallery img{
+
+}
+.section3{
+    flex-flow: column;
+    min-height: 100vw;
+}
+.section4 .liste{
+    flex-flow: column;
+}
+.section4 .service{
+    max-width: 100%;
+}
+footer{
+    flex-flow: column;
+}
+footer div{
+    border-bottom: 1px solid silver;
+    width: fit-content;
+    align-items: center;
+}
+}

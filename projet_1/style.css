@@ -1,0 +1,97 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.fond{
+  background-color: #f8f8f8;
+  float: left;
+}
+
+#sideleft{
+  display: inline-block;
+  background-color: #4a4a4c;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+}
+
+#sideright{
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#sideright > div > p {
+  margin-top: 3px;
+}
+
+#sideright > div > h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.logiciel{
+  width: 200px;
+}
+
+.logo{
+  width: 150px;
+  height: 150px;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  border: 10px solid white;
+  margin: 20px 5px 5px 40px;
+}
+.fondbluer{
+  color: white;
+  background-color: #11a9f3;
+  border-radius: 50%;
+  padding: 5px 5px 5px 5px;
+}
+
+.fondbluel1{
+  color: #11a9f3;
+  background-color: white;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  padding: 5px 5px 5px 5px;
+}
+
+.fondbluel2{
+  color: white;
+  background-color: #11a9f3;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  padding: 5px 5px 5px 5px;
+}
+
+.blue{
+  color:  #11a9f3;
+}
+
+.logiciel{
+  width: 270px;
+}
+
+.star{
+  float: right;
+}
+
+.creative{
+  padding-top: 0px;
+  height: 100px
+}
+
+h1{
+  font-size: 50px;
+  margin-bottom: 0px;
+}
+
+h2{
+  border-bottom: solid;
+  padding-bottom: 10px;
+  border-width: 1px;
+  border-color: silver;
+}

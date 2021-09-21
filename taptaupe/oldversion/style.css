@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.flex{
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.none{
+    display: none;
+}
+
+.tetram{
+    width: 100px;
+    height: 100px;
+}
+
+input{
+    width: 20px;
+}
+
+.chocobo {
+    background-image: url(image/tetram.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#boardgame {
+    height: 80vh;
+    width: 80vh;
+    flex-wrap: wrap;
+    background-color: olive;
+    border: 1px solid black;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.block {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.blood{
+    width: 100px;
+    height: 100px;
+}
+
+td{
+    width: 120px;
+    height: 120px;
+    border: thick double olive;
+}

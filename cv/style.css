@@ -1,0 +1,9 @@
+#menu{
+  background-color: blue;
+}
+#menu>div{
+  display: inline-block;
+}
+#presentation{
+  display: inline-block;
+}

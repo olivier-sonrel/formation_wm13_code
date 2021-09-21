@@ -1,0 +1,18 @@
+*{display: flex;}
+
+main{
+    flex-flow: row wrap;
+}
+
+#talin{
+    align-self: stretch;
+}
+
+@media screen and (max-width: 1024px){
+    main{
+            flex-flow: column;
+    }
+    #talin{
+        align-self: stretch;
+    }
+}

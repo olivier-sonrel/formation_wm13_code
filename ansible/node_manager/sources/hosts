@@ -1,0 +1,4 @@
+[web]
+http1 ansible_user=vagrant
+[db]
+bdd1 ansible_user=vagrant

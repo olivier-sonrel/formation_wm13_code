@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Shifumi</title>
+        <link rel="stylesheet" href="style.css">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    </head>
+    <body>
+        <h1>Shifumi</h1>
+        <button id="start">Start Game!</button>
+        <div id="banner" class="board-size flex">
+            <img src="game.jpeg" alt="">
+        </div>
+        <div id="gameboard" class="flex none board-size">
+            <div id="player-choice">
+                <img class="icon" data-choice="rock" src="rock.png" alt="">
+                <img class="icon" data-choice="paper" src="paper.png" alt="">
+                <img class="icon" data-choice="scisors" src="scisors.png" alt="">
+            </div>
+            <div id="computer-choice"></div>
+            <div>
+              <p id="result"></p>
+              <h2>Player: <span id="player-points">0</span>, Computer:<span id="computer-points">0</span></h2>
+            </div>
+        </div>
+        <H2 class="none winboard">YOU WIN</H2>
+        <H2 class="none looseboard">YOU LOOSE</H2>
+
+        <script src="script.js"></script>
+    </body>
+</html>

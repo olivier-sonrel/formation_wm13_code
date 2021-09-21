@@ -1,0 +1,123 @@
+@media screen and (min-width: 801px) {
+
+    *{
+        display: flex;
+        font-family: "Open Sans", Arial, sans-serif;
+    }
+
+    .ceo{
+        background-color: blue;
+        color: white;
+        width: min-content;
+        font-size: 50px;
+        padding: 5%;
+    }
+
+    body {
+        padding: 7px;
+        border-style: solid;
+        border-width: 1px;
+        flex-direction: column;
+        width: min-content;
+    }
+
+    header{
+        flex-direction: column;
+    }
+
+    header .img{
+        background-color: silver;
+        height: 585px;
+        width: 585px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jon{
+        background-color: black;
+        flex-direction: column;
+        color: white;
+        padding-left: 5%;
+    }
+
+    .jon h1{
+
+    }
+
+    main{
+        padding: 3%;
+    }
+
+    footer{
+        padding: 3%;
+        justify-content: space-around;
+    }
+
+    footer img{
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+    *{
+        display: flex;
+        font-family: "Open Sans", Arial, sans-serif;
+
+    }
+
+    .ceo{
+        background-color: blue;
+        color: white;
+        width: 70%;
+        font-size: 50px;
+        padding: 5%;
+    }
+
+    body {
+        padding: 7px;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    header .img{
+        background-color: silver;
+        height: 585px;
+        width: 585px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jon{
+        background-color: black;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+
+    .jon h1{
+        padding: 8%;
+    }
+
+    main{
+        padding: 3%;
+    }
+
+    p{
+        font-size: 11px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 3%;
+        justify-content: space-around;
+    }
+
+    footer img{
+        max-width: 70px;
+        max-height: 70px;
+    }
+}

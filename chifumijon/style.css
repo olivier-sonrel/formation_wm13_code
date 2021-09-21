@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, #start {
+    margin-bottom: 75px;
+}
+
+.icon {
+    width: 80px;
+    padding: 1em;
+}
+
+.board-size {
+    height: 500px;
+    width: 900px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.none {
+    display: none;
+}
+
+.border{
+    border-style: solid;
+    border-color: black;
+}
+
+.winboard{
+    color: chartreuse;
+    font-size: xx-large;
+    position: absolute;
+}
+
+.looseboard{
+    color: brown;
+    font-size: xx-large;
+    position: absolute;
+}

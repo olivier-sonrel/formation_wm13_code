@@ -1,0 +1,1 @@
+<?php $arrayPays = array('Skyrim'=> 'Solitude', 'High Rock' => 'Daggerfall', 'Morrowind' => 'Balmora', 'Hammerfell'=> 'Elinhir',  'Cyrodiil' => 'Imperial City', 'Valenwood'=> 'Haven', 'Elsweyr' => 'Dune'); ?>

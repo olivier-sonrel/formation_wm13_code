@@ -1,0 +1,13 @@
+.flex{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div{
+    border-style: solid;
+}
+
+main{
+    display: flex;
+    flex-flow: row;
+}

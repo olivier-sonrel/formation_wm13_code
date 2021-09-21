@@ -1,0 +1,34 @@
+.around {
+    display: flex;
+    background-color: blue;
+    flex-direction: column;
+
+
+}
+
+.around div {
+    background-color: silver;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+/* p {
+    color: blue;
+}
+@media screen and (max-width: 1024px) {
+    p{
+        color: red;
+        background-color: black;
+        font-size: 1.2em;
+    }
+
+} */
